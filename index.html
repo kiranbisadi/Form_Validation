@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form_validation</title>
+    <style>
+        p {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>This is an contact form</h2>
+    <form id="contactForm">
+        <input placeholder="name" id="name">
+        <p id="nameerror"></p>
+        <input placeholder="Email" id="email">
+        <p id="emailerror"></p>
+        <input placeholder="mobile" id="mobile">
+        <p id="mobileerror"></p>
+        <textarea id="message"></textarea>
+        <p id="messageerror"></p>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+<script>
+    document.getElementById("contactForm").addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        document.getElementById("nameerror").textContent = '';
+        document.getElementById("emailerror").textContent = '';
+        document.getElementById("mobileerror").textContent = '';
+        document.getElementById("messageerror").textContent = '';
+
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let mobile = document.getElementById("mobile").value;
+        let message = document.getElementById("message").value;
+
+        let isvalid = true;
+        if (name === "") {
+            document.getElementById('nameerror').textContent = "Name is required";
+            isvalid = false;
+        }
+        if (email === "" || !email.includes('@') || !email.includes('.')) {
+            document.getElementById('emailerror').textContent = "Email is Required";
+            isvalid = false;
+        }
+        if (mobile === "" || mobile.length !== 10 || isNaN(mobile)) {
+            document.getElementById('mobileerror').textContent = "Mobile Number is Required";
+            isvalid = false;
+        }
+        if (message === "") {
+            document.getElementById('messageerror').textContent = "Message should contain at least 2 words";
+            isvalid = false;
+        }
+        if (isvalid) {
+            alert("Form submitted successfully");
+            document.getElementById("contactForm").reset();
+        }
+    })
+</script>
+
+</html>
