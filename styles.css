@@ -1,0 +1,19 @@
+body {
+    background: #f4f6f9;
+    font-family: Arial, sans-serif;
+}
+
+.form-box {
+    background: white;
+    width: 100%;
+    max-width: 400px;
+}
+
+input:focus {
+    box-shadow: none !important;
+    border-color: #0d6efd !important;
+}
+
+small {
+    font-size: 14px;
+}

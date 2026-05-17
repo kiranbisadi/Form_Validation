@@ -1,14 +1,19 @@
-# Contact Form Validation
+Sign Up Form Validation
 
-This project demonstrates a simple contact form with validation using HTML, CSS, and JavaScript.
+A responsive Sign Up Form built using HTML, CSS, Bootstrap, and JavaScript.
 
-## Features
-- Name validation
+Features
+
+- Responsive colorful UI
+- Bootstrap styling
+- Form validation using JavaScript
 - Email validation
-- Mobile number validation
-- Message validation
+- Password matching validation
+- Error and success messages
 
-## Technologies Used
+Technologies Used
+
 - HTML
 - CSS
+- Bootstrap
 - JavaScript
